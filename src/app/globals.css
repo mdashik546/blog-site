@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.border-animate {
+  position: relative;
+  
+}
+
+.border-animate::after {
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  content: '';
+  background: white;
+  transition: 0.5s ease-in-out;
+  -bottom: 6px;
+  left: 0;
+  
+  
+}
+
+.border-animate:hover::after {
+  width: 100%;
+  
+  
+}
+
+
+input[type="search"]::-webkit-search-cancel-button{
+  display: none;
+}
+
