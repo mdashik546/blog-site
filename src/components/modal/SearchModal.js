@@ -7,7 +7,7 @@ const SearchModal = ({ handleClose, searchModalRef }) => {
         <div ref={searchModalRef}>
             <button
                 onClick={() => handleClose("BiSearch")}
-                className="absolute right-20"
+                className="absolute right-20 top-10"
             >
                 <RxCross1
                     className="text-white hover:-rotate-90 duration-300"

@@ -55,11 +55,11 @@ const Slider = () => {
   };
 
   return (
-    <div className=" relative   group">
+    <div className=" relative   group ">
       {sliderData.map((slide, idx) => (
         <div
           key={slide.id}
-          className={`absolute  transition-opacity duration-700 overflow-hidden  cursor-pointer   ${idx === currentIndex ? "opacity-100" : "opacity-0 "
+          className={`absolute transition-opacity duration-700 overflow-hidden  cursor-pointer   ${idx === currentIndex ? "opacity-100" : "opacity-0 "
             }`}
         >
           <Image
@@ -71,7 +71,7 @@ const Slider = () => {
             className=" w-full  "
           />
 
-          <div className="  w-full z-10  absolute inset-0 bg-black/50   ">
+          <div className="  w-full   z-10 absolute inset-0 bg-black/50   ">
             <div className="text-white flex flex-col justify-center items-center text-center  mx-auto max-w-[650px] h-[700px]  ">
               <AnimateButton animateButton={slide?.link} />
 
@@ -92,12 +92,12 @@ const Slider = () => {
           </div>
         </div>
       ))}
-      <div className="absolute top-96 right-20 flex flex-col gap-3 z-40">
+      <div className="absolute top-96 right-20 flex flex-col gap-3 ">
         {sliderData.map((_, index) => (
           <div
             key={index}
             onClick={() => goToSlide(index)}
-            className={`size-3 mx-2 rounded-full cursor-pointer  duration-300   transition-all ${currentIndex === index
+            className={` z-10 size-3 mx-2 rounded-full cursor-pointer  duration-300   transition-all ${currentIndex === index
               ? "bg-[#E93314] "
               : "border hover:bg-[#E93314] hover:border-none  duration-500 delay-100 ease-in-out transition-all "
               }`}
