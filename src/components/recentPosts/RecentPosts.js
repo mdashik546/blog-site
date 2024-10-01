@@ -142,6 +142,7 @@ const RecentPosts = () => {
                   width={150}
                   height={40}
                   alt="loading...?"
+                  className="w-auto h-auto max-w-[150px] max-h-[40px]"
                 />
                 <button className="text-white bg-[#E93314] px-6 py-2.5 uppercase text-xs font-medium rounded-full duration-300 transition-all hover:text-gray-600 hover:bg-white">
                   buy theme

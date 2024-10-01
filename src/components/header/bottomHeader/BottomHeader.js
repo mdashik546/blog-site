@@ -34,6 +34,8 @@ const BottomHeader = () => {
   const briefcaseModalRef = useRef(null);
   handleOutSideClickEvent(briefcaseModalRef, setBriefcase);
 
+
+//   modalOpen
   const handleIcon = (item) => {
     if (item?.action === "BiSearch") {
       setOpenSearchbar(!openSearchbar);
@@ -45,7 +47,7 @@ const BottomHeader = () => {
   };
 
 
-
+// modalClose
   const handleClose = (item) => {
     if (item === "BiSearch") {
       setOpenSearchbar(false);
@@ -64,6 +66,7 @@ const BottomHeader = () => {
           width={143}
           height={43}
           alt="loading...?"
+          className="w-auto h-auto max-w-[143px] max-h-[43px]"
         />
 
         <nav>
@@ -93,10 +96,9 @@ const BottomHeader = () => {
                   : "visible"
               }`}
             >
-              <div   ref={briefcaseModalRef} className="relative group z-10 ">
-                {item.icon}
-                <div
-                
+                 {item.icon}
+              <div       className="relative group z-10 ">
+                <div     
                   className={`  ${
                     item?.action === "RiBriefcase2Line"
                       ? "absolute size-4 text-xs -bottom-1.5 group-hover:text-white text-white -right-1 bg-[#E93314] rounded-full"
@@ -138,7 +140,7 @@ const BottomHeader = () => {
           {briefcase && (
             <BriefcaseModal
               handleClose={handleClose}
-              briefcaseModalRef={briefcaseModalRef}
+        //    briefcaseModalRef={briefcaseModalRef}
             />
           )}
         </div>

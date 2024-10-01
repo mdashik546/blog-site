@@ -66,9 +66,8 @@ const Slider = () => {
             src={slide.image}
             width={1800}
             height={900}
-            alt=""
-            property=""
-            className=" w-full  "
+            alt=" "
+            className=" w-full"
           />
 
           <div className="  w-full   z-10 absolute inset-0 bg-black/50   ">

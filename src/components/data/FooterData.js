@@ -1,4 +1,6 @@
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
+import { FaInstagram, FaYoutube } from "react-icons/fa6";
+import { GrFacebookOption } from "react-icons/gr";
+import { RiTwitterXLine } from "react-icons/ri";
 
 export  const footerData = [
   {
@@ -60,26 +62,26 @@ export  const footerData = [
         {
           id: 1,
           platform: "Facebook",
-          icon: <FaFacebook/>,
-          link: "https://www.facebook.com"
+          icon: <GrFacebookOption/>,
+          link: "https://www.facebook.com/profile.php?id=100021923862893"
         },
         {
           id: 2,
           platform: "Twitter",
-          icon: <FaTwitter/>,
+          icon: <RiTwitterXLine/>,
           link: "https://www.twitter.com"
         },
      
         {
           id: 3,
           platform: "Youtube",
-          icon: "linkedin-icon",
+          icon: <FaYoutube/>,
           link: "https://www.youtube.com"
         },   {
           id: 3,
           platform: "Instagram",
           icon: <FaInstagram/>,
-          link: "https://www.instagram.com"
+          link: "https://www.instagram.com/ashik__alahi/"
         },
       ]
   }
