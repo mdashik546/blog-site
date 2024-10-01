@@ -8,8 +8,7 @@ const BlogAnimation = ({
   alignment,
   textSize,
   colorChange,
-  dateSection,
-}) => {
+  dateSection, }) => {
   return (
     <div className={`space-y-1 ${space}  `}>
       <h1 className={`text-2xl font-medium cursor-pointer ${textSize}`}>

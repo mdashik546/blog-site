@@ -29,6 +29,8 @@ export const recentTrendData =[
             "comment": 0
           }
         ],
+
+        
         "recentTrendChild": [
           {
             "id": 1,
@@ -38,11 +40,7 @@ export const recentTrendData =[
             "name": "Sandra Jones",
             "date": "01 Jan 2020",
             "comment": 5,
-            "recentData": {
-              "views": 250,
-              "likes": 120,
-              "shares": 35
-            }
+           
           },
           {
             "id": 2,
@@ -52,11 +50,7 @@ export const recentTrendData =[
             "name": "Michael Smith",
             "date": "15 Feb 2021",
             "comment": 12,
-            "recentData": {
-              "views": 400,
-              "likes": 300,
-              "shares": 50
-            }
+         
           },
           {
             "id": 3,
@@ -66,11 +60,7 @@ export const recentTrendData =[
             "name": "Emma Brown",
             "date": "10 Mar 2022",
             "comment": 8,
-            "recentData": {
-              "views": 600,
-              "likes": 450,
-              "shares": 75
-            }
+           
           }
         ]
       }
