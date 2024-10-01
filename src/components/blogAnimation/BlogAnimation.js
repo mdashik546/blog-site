@@ -8,16 +8,18 @@ const BlogAnimation = ({
   alignment,
   textSize,
   colorChange,
-  dateSection, }) => {
+  dateSection, by = true }) => {
   return (
     <div className={`space-y-1 ${space}  `}>
       <h1 className={`text-2xl font-medium cursor-pointer ${textSize}`}>
         {title}
       </h1>
       <div className={`flex items-center gap-x-3 ${alignment} `}>
-        <p className="hover:text-[#E93314]  cursor-pointer duration-300 text-xs font-semibold">
-          BY {des}
-        </p>
+        {
+          by && <p className="hover:text-[#E93314]  cursor-pointer duration-300 text-xs font-semibold">
+            BY {des}
+          </p>
+        }
         <p
           className={`hover:text-[#E93314]  cursor-pointer duration-300 text-xs font-semibold ${dateSection}`}
         >
@@ -26,7 +28,9 @@ const BlogAnimation = ({
         <div
           className={`flex items-center gap-x-1 hover:text-[#E93314]  cursor-pointer  duration-300 ${colorChange}`}
         >
-          <FaRegComments />
+          {
+            by && <FaRegComments />
+          }
           {comment}
         </div>
       </div>

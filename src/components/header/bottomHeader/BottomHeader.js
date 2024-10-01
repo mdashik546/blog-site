@@ -106,15 +106,17 @@ const BottomHeader = () => {
             </div>
 
             {/* /* seachModal */}
-            <div className={` fixed top-0   bg-[#121418] h-[410px] w-full px-20 py-10 transform transition-all duration-500 ease-in-out ${openSearchbar ? "scale-100 opacity-100  z-40" : "scale-95 opacity-0"
+        <div>
+        <div className={` fixed top-0   bg-[#121418] h-[410px] w-full px-20 py-10 transform transition-all duration-500 ease-in-out  ${openSearchbar ? "scale-100 opacity-100  z-40 " : "scale-95 opacity-0 "
                 }`}>
                 {openSearchbar && <SearchModal handleClose={handleClose} searchModalRef={searchModalRef} />}
             </div>
+        </div>
 
 
             {/* briefcaseModal */}
             <div className="flex justify-end mr-5 ">
-                <div className={`bg-[#121418] size-80  absolute  transition-all duration-500 ease-in-out  ${briefcase ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                <div className={`bg-[#121418] size-80  absolute  transition-all transform duration-500 ease-in-out  ${briefcase ? "opacity-100 scale-100" : "opacity-0 scale-95"
                     }`}>
                     {briefcase && <BriefcaseModal handleClose={handleClose}  briefcaseModalRef={briefcaseModalRef} />}
                 </div>

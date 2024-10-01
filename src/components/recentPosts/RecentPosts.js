@@ -60,7 +60,7 @@ const RecentPosts = () => {
   ];
 
   return (
-    <div className="my-16 grid grid-cols-3 gap-x-8">
+    <div className="my-14 grid grid-cols-3 gap-x-8">
       <div className="col-span-2">
         <div className="flex items-center ">
           <h1 className="text-3xl font-semibold">Recent Posts</h1>
@@ -150,12 +150,12 @@ const RecentPosts = () => {
             </div>
           </div>
         </div>
-        <div className="my-16">
+        <div className="my-14">
           <ContentChoice choice={"Follow Us"} />
-          <div className="grid grid-cols-4 gap-5   mt-7 place-items-center">
+          <div className="grid grid-cols-4 gap-5   mt-8 place-items-center">
             {followUs?.map((follow, iconIndex) => (
               <div
-                key={follow?.id}
+                key={iconIndex}
                 className="cursor-pointer group z-10 flex flex-col items-center justify-center gap-2"
               >
                 <button
@@ -179,15 +179,30 @@ const RecentPosts = () => {
               </div>
             ))}
           </div>
-          <div className="w-full border-b my-16"></div>
+          <div className="w-full border-b my-14"></div>
         </div>
-        <div>
+        <div className="">
           <ContentChoice choice={"Editor's choice"} />
           <div>
-            {recentTrendData[1]?.recentTrendChild?.map((recentChild) => (
-              <div key={recentChild?.id}>
-
-                
+            {recentTrendData[0]?.recentTrendChild?.map((recentChild, edx) => (
+              <div
+                key={edx}
+                className="cursor-pointer mt-[30px] group flex items-center justify-center w-full gap-x-3"
+              >
+                <div
+                  className={`h-28  w-[150px] overflow-hidden ${edx === 0 && "w-[170px]"}`}
+                >
+                  <Image
+                    src={recentChild?.image}
+                    alt="loading...?"
+                    width={112}
+                    height={112}
+                    className="w-full h-full transition-transform duration-1000  ease-in-out group-hover:scale-110  object-fill"
+                  />
+                </div>
+                <div>
+                 <BlogAnimation  title={recentChild?.title}  textSize={`text-base`} des={recentChild?.name} date={recentChild?.date} comment={recentChild?.comment}/>
+                </div>
               </div>
             ))}
           </div>
