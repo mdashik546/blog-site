@@ -11,7 +11,7 @@ const BlogAnimation = ({
   dateSection, by = true }) => {
   return (
     <div className={`space-y-1 ${space}  `}>
-      <h1 className={`text-2xl font-medium cursor-pointer ${textSize}`}>
+      <h1 className={`border-animate text-2xl font-medium cursor-pointer ${textSize}`}>
         {title}
       </h1>
       <div className={`flex items-center gap-x-3 ${alignment} `}>

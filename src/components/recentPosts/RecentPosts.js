@@ -7,6 +7,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import ContentChoice from "../contentChoice/ContentChoice";
+import Link from "next/link";
 
 const RecentPosts = () => {
   const recentData = [
@@ -36,12 +37,14 @@ const RecentPosts = () => {
     {
       id: 1,
       icon: <GrFacebookOption />,
+      link: "https://www.facebook.com/profile.php?id=100021923862893",
       like: "3k",
       name: "Like",
     },
     {
       id: 2,
       icon: <RiTwitterXLine />,
+   
       like: "3k",
       name: "Followers",
     },
@@ -52,8 +55,9 @@ const RecentPosts = () => {
       name: "Followers",
     },
     {
-      id: 1,
+      id: 4,
       icon: <FaInstagram />,
+      link: "https://www.instagram.com/ashik__alahi/",
       like: "3k",
       name: "Followers",
     },
@@ -87,9 +91,8 @@ const RecentPosts = () => {
           {recentTrendData[0]?.recentData?.map((recentTrend, idx) => (
             <div
               key={recentData?.id}
-              className={` group relative cursor-pointer  ${
-                idx === 0 ? "col-span-2 row-span-2" : " col-span-1 row-span-1"
-              }`}
+              className={` group relative cursor-pointer  ${idx === 0 ? "col-span-2 row-span-2" : " col-span-1 row-span-1"
+                }`}
             >
               <div className="overflow-hidden  ">
                 <Image
@@ -159,22 +162,20 @@ const RecentPosts = () => {
                 key={iconIndex}
                 className="cursor-pointer group z-10 flex flex-col items-center justify-center gap-2"
               >
-                <button
+                <Link href={follow?.link || {}}
                   className={`group-hover:-translate-y-2 text-2xl transition-transform hover:opacity-80  duration-700
-                                            ${
-                                              iconIndex === 0
-                                                ? "text-[#3b5998]"
-                                                : iconIndex === 1
-                                                ? "text-[#00aced]"
-                                                : iconIndex === 2
-                                                ? "text-[#ff0000]"
-                                                : iconIndex === 3
-                                                ? "text-[#C862DC]"
-                                                : ""
-                                            } `}
-                >
+                      ${iconIndex === 0
+                      ? "text-[#3b5998]"
+                      : iconIndex === 1
+                        ? "text-[#00aced]"
+                        : iconIndex === 2
+                          ? "text-[#ff0000]"
+                          : iconIndex === 3
+                            ? "text-[#C862DC]"
+                            : ""
+                    } `}>
                   {follow?.icon}
-                </button>
+                </Link>
                 <h4 className="text-lg font-medium">{follow?.like}</h4>
                 <p className="text-xs text-gray-500">{follow?.name}</p>
               </div>
@@ -202,7 +203,7 @@ const RecentPosts = () => {
                   />
                 </div>
                 <div>
-                 <BlogAnimation  title={recentChild?.title}  textSize={`text-base`} des={recentChild?.name} date={recentChild?.date} comment={recentChild?.comment}/>
+                  <BlogAnimation title={recentChild?.title} textSize={`text-base`} des={recentChild?.name} date={recentChild?.date} comment={recentChild?.comment} />
                 </div>
               </div>
             ))}
