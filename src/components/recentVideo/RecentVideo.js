@@ -9,6 +9,7 @@ import AnimateButton from "../animateButton/AnimateButton";
 const RecentVideo = () => {
   const [currentVideo, setCurrentVideo] = useState({
     title: "Robots in Everyday Life: Exploring the Impact of AI",
+    id: 1,
     trend: "Ai Video",
     name: "Sandra Jones",
     date: "01 Jan 2020",
