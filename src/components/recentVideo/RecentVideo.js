@@ -12,7 +12,6 @@ const RecentVideo = () => {
     trend: "Ai Video",
     name: "Sandra Jones",
     date: "01 Jan 2020",
-    id: 1,
     thumbnail: "/images/video-ai1.jpg",
     isPlaying: false,
     videoURL: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
