@@ -34,7 +34,7 @@ export const recentTrendData =[
         "recentTrendChild": [
           {
             "id": 1,
-            "image": "/images/post-ai23.jpg",
+            "image": "/images/post-ai26.jpg",
             "title": "Unlocking the Power of Quantum Computing with AI",
             "trend": "AI Trends",
             "name": "Sandra Jones",
@@ -44,7 +44,7 @@ export const recentTrendData =[
           },
           {
             "id": 2,
-            "image": "/images/post-ai24.jpg",
+            "image": "/images/post-ai27.jpg",
             "title": "Exploring the Future of Autonomous Vehicles",
             "trend": "Tech Innovations",
             "name": "Michael Smith",
@@ -54,7 +54,7 @@ export const recentTrendData =[
           },
           {
             "id": 3,
-            "image": "/images/post-ai25.jpg",
+            "image": "/images/post-ai28.jpg",
             "title": "AI's Role in Enhancing Healthcare Diagnostics",
             "trend": "Healthcare Tech",
             "name": "Emma Brown",

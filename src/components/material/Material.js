@@ -39,7 +39,7 @@ const Material = () => {
                 {materialData?.map((material) => (
                     <div key={material?.id} className={`z-10 group ${material?.id === 1 ? "w-4/12" : " w-8/12"}`}>
                         <div className='h-[450px]  overflow-hidden'>
-                            <Image src={material?.image} width={1000} height={500} alt='loading' className='h-full w-full transition-transform duration-1000  ease-in-out group-hover:scale-110  object-fill cursor-pointer  ' />
+                            <Image src={material?.image} width={1000} height={500} alt='loading' className='h-full w-full transition-transform duration-1000  ease-in-out group-hover:scale-110  object-cover cursor-pointer  ' />
                         </div>
                         <div className='mt-4 '>
                             <BlogAnimation title={material?.title}

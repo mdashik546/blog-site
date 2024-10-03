@@ -100,7 +100,7 @@ const RecentPosts = () => {
                   alt="loading...?"
                   width={849}
                   height={316}
-                  className="h-full w-full  transition-transform duration-1000  ease-in-out group-hover:scale-110  object-fill "
+                  className="h-full w-full  transition-transform duration-1000  ease-in-out group-hover:scale-110  object-cover "
                 />
               </div>
               <div className="absolute inset-0 bg-black/50 text-white ">
@@ -145,9 +145,10 @@ const RecentPosts = () => {
                   width={150}
                   height={40}
                   alt="loading...?"
-                  className="w-auto h-auto max-w-[150px] max-h-[40px]"
+                  className="w-auto h-auto max-w-[150px] max-h-[40px] "
                 />
-                <button className="text-white bg-[#E93314] px-6 py-2.5 uppercase text-xs font-medium rounded-full duration-300 transition-all hover:text-gray-600 hover:bg-white">
+                <button className="text-white bg-[#E93314] px-6 py-2.5 uppercase text-xs font-medium rounded-full 
+                duration-300 transition-all hover:text-gray-600 hover:bg-white">
                   buy theme
                 </button>
               </div>
@@ -199,11 +200,12 @@ const RecentPosts = () => {
                     alt="loading...?"
                     width={112}
                     height={112}
-                    className="w-full h-full transition-transform duration-1000  ease-in-out group-hover:scale-110  object-fill"
+                    className="w-full h-full transition-transform duration-1000  ease-in-out group-hover:scale-110  object-cover"
                   />
                 </div>
                 <div>
-                  <BlogAnimation title={recentChild?.title} textSize={`text-base`} des={recentChild?.name} date={recentChild?.date} comment={recentChild?.comment} />
+                  <BlogAnimation title={recentChild?.title} textSize={`text-base`} des={recentChild?.name}
+                   date={recentChild?.date} comment={recentChild?.comment} colorChange ={`text-gray-400`} dateSection={`text-gray-400`}/>
                 </div>
               </div>
             ))}

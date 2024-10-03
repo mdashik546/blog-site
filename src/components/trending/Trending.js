@@ -30,7 +30,7 @@ const Trending = () => {
                 {trendingData?.map((trending) => (
                     <div key={trending?.id} className='flex gap-x-4 items-center group z-10'>
                         <div className='w-3/6 overflow-hidden cursor-pointer'>
-                            <Image src={trending?.image} alt='loading' width={123} height={123} className='w-full h-full transition-transform duration-1000  ease-in-out group-hover:scale-110  object-fill' />
+                            <Image src={trending?.image} alt='loading' width={123} height={123} className='w-full h-full transition-transform duration-1000  ease-in-out group-hover:scale-110  object-cover' />
                         </div>
                         <div>
                             <h4 className='hover:text-[#E93314]  cursor-pointer duration-300 text-xs opacity-70  font-semibold uppercase'>{trending?.name}</h4>
