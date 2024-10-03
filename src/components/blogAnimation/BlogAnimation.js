@@ -11,17 +11,17 @@ const BlogAnimation = ({
   dateSection, by = true }) => {
   return (
     <div className={`space-y-1 ${space}  `}>
-      <h1 className={`border-animate text-2xl font-medium cursor-pointer ${textSize}`}>
+      <h1 className={` text-2xl font-medium cursor-pointer ${textSize}`}>
         {title}
       </h1>
       <div className={`flex items-center gap-x-3 ${alignment} `}>
         {
-          by && <p className="hover:text-[#E93314]  cursor-pointer duration-300 text-xs font-semibold">
-            BY {des}
+          by && <p className="hover:text-[#E93314]  cursor-pointer duration-300 text-xs font-medium">
+            By {des}
           </p>
         }
         <p
-          className={`hover:text-[#E93314]  cursor-pointer duration-300 text-xs font-semibold ${dateSection}`}
+          className={`hover:text-[#E93314]  cursor-pointer duration-300 text-xs  ${dateSection}`}
         >
           {date}
         </p>

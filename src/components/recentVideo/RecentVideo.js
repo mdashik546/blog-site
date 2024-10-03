@@ -5,9 +5,14 @@ import { GoArrowRight } from "react-icons/go";
 import { BsTriangleFill } from "react-icons/bs";
 import BlogAnimation from "../blogAnimation/BlogAnimation";
 import AnimateButton from "../animateButton/AnimateButton";
+import Link from "next/link";
 
 const RecentVideo = () => {
   const [currentVideo, setCurrentVideo] = useState({
+    title: "Robots in Everyday Life: Exploring the Impact of AI",
+    trend: "Ai Video",
+    name: "Sandra Jones",
+    date: "01 Jan 2020",
     id: 1,
     thumbnail: "/images/video-ai1.jpg",
   });
@@ -20,7 +25,7 @@ const RecentVideo = () => {
       name: "Sandra Jones",
       date: "01 Jan 2020",
       comment: 0,
-      videoURL: "",
+      videoURL: "https://www.youtube.com/watch?v=Et7TTfwvBFo",
     },
     {
       id: 2,
@@ -71,7 +76,7 @@ const RecentVideo = () => {
             </div>
           </button>
         </div>
-        <div className="cursor-pointer  mt-8"> 
+        <div className="cursor-pointer  mt-8">
           <div className=" group overflow-hidden relative z-10">
             <Image
               className="h-[650px] object-cover w-full transition-transform duration-1000  ease-in-out group-hover:scale-110"
@@ -81,7 +86,7 @@ const RecentVideo = () => {
               height={800}
             />
             <div className="absolute top-0 inset-0 bg-black/40 ">
-              <div className="flex justify-center flex-col items-center h-[650px]">
+              <Link href={currentVideo?.videoURL || {}} className="flex justify-center flex-col items-center h-[650px]">
                 <div
                   className="bg-white hover:bg-[#E93314] duration-300 hover:scale-125 hover:text-white 
                size-20 flex items-center justify-center rounded-full object-cover"
@@ -100,7 +105,7 @@ const RecentVideo = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -108,9 +113,8 @@ const RecentVideo = () => {
             {recentVideoData?.map((videoContent) => (
               <div
                 key={videoContent?.id}
-                className={` -mt-10  ${
-                  currentVideo.id === videoContent.id ? "z-20" : "z-0"
-                }`}
+                className={` -mt-10  ${currentVideo.id === videoContent.id ? "z-20" : "z-0"
+                  }`}
               >
                 <div
                   onClick={() => handleVideoClick(videoContent)}
@@ -121,26 +125,23 @@ const RecentVideo = () => {
                     alt="loading...?"
                     width={318}
                     height={250}
-                    className={` h-52 object-cover ${
-                      currentVideo.id === videoContent.id
+                    className={` h-52 object-cover ${currentVideo.id === videoContent.id
                         ? "transition-transform duration-1000  ease-in-out group-hover:scale-110"
                         : " "
-                    }`}
+                      }`}
                   />
                   <div
-                    className={`absolute top-0 inset-0  w-full px-6 ${
-                      currentVideo.id === videoContent.id
+                    className={`absolute top-0 inset-0  w-full px-6 ${currentVideo.id === videoContent.id
                         ? "bg-black/50 "
                         : "bg-[#121418] "
-                    }`}
+                      }`}
                   >
                     <div className="absolute bottom-8 ">
                       <div
-                        className={`size-6   ${
-                          currentVideo.id === videoContent.id
+                        className={`size-6   ${currentVideo.id === videoContent.id
                             ? "border-white border-2"
                             : "border-gray-500"
-                        } border rounded-full flex items-center justify-center`}
+                          } border rounded-full flex items-center justify-center`}
                       >
                         <BsTriangleFill className="rotate-90 text-[10px] text-white " />
                       </div>

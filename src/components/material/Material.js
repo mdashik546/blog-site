@@ -27,13 +27,13 @@ const Material = () => {
     return (
         <div className=' my-16'>
             <div className='flex items-center justify-center text-center gap-x-5'>
-                <div className='w-5/12 border-y pb-1 border-gray-300'></div>
+                <div className='w-5/12 border-y pb-1 '></div>
                 <div className='w-2/12'>
                     <h1 className='text-[32px] font-semibold'>Hot Material</h1>
                     <p className='text-gray-500 pt-0.5 text-base font-normal'>Articles Of The Day
                     </p>
                 </div>
-                <div className='w-5/12 border-y pb-1 border-gray-300'></div>
+                <div className='w-5/12 border-y pb-1 '></div>
             </div>
             <div className='flex flex-row mt-10 gap-5 '>
                 {materialData?.map((material) => (
