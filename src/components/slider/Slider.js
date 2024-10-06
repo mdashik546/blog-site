@@ -50,7 +50,6 @@ const Slider = () => {
   }, []);
 
   const goToSlide = (index) => {
-    console.log(index, "index");
     setCurrentIndex(index);
   };
 
