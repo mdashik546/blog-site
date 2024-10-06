@@ -8,6 +8,8 @@ import { useEffect, useRef, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { LuUser2 } from "react-icons/lu";
 import { RiBriefcase2Line } from "react-icons/ri";
+import { IoMenu } from "react-icons/io5";
+import { RxCross2 } from "react-icons/rx";
 
 const BottomHeader = () => {
   const icons = [
@@ -32,28 +34,30 @@ const BottomHeader = () => {
   const [hoverIndexTwo, setHoverIndexTwo] = useState(null)
   const closeHoverRef = useRef(null);
 
+  const [menuOpen, setMenuOpen] = useState(false)
+
   const handleMouseEnter = (index) => {
     clearTimeout(closeHoverRef.current);
-      setHoverIndex(index);
+    setHoverIndex(index);
   };
 
   const handleMouseLeave = () => {
     closeHoverRef.current = setTimeout(() => {
       setHoverIndex(null);
-    
+
     }, 500);
   };
   const closeHoverRefTwo = useRef(null);
 
   const handleMouseEnterTwo = (index) => {
     clearTimeout(closeHoverRefTwo.current);
-      setHoverIndexTwo(index);
+    setHoverIndexTwo(index);
   };
 
   const handleMouseLeaveTwo = () => {
     closeHoverRefTwo.current = setTimeout(() => {
       setHoverIndexTwo(null);
-    
+
     }, 500);
   };
 
@@ -103,7 +107,7 @@ const BottomHeader = () => {
   return (
     <div className="relative z-40">
       <div
-        className={`bg-[#121418] py-5 px-20  flex items-center justify-between w-full duration-300 transition-all  ease-in-out   ${sticky && "fixed top-0 bg-white shadow-sm border-b  "
+        className={`bg-[#121418] py-5 lg:px-20 px-5  flex items-center justify-between w-full duration-300 transition-all  ease-in-out   ${sticky && "fixed top-0 bg-white shadow-sm border-b  "
           }`}
       >
         <Image
@@ -113,9 +117,14 @@ const BottomHeader = () => {
           alt="loading...?"
           className="w-auto h-auto max-w-[143px] max-h-[43px]"
         />
+   
+        <nav >
+        <div onClick={() => setMenuOpen(!menuOpen)} className='text-white text-2xl cursor-pointer md:hidden block'>
+          {menuOpen ? <div className='absolute top-5 z-30 right-5'><RxCross2 /></div>
+            : <IoMenu />}
 
-        <nav className="">
-          <ul className="flex gap-x-5">
+        </div>
+          <ul className={`md:static flex md:flex-row flex-col z-20 gap-x-5 absolute  duration-500 transition-transform   w-full left-0  ${menuOpen ? "top-0 md:bg-transparent bg-[#121418]   translate-y-0 p-10" : "bg-[#121418] md:-top-0 -top-36  md:-translate-y-0 -translate-y-36"}  `}>
             {navberData?.map((menu, menuIndex) => (
               <li
                 onMouseEnter={() => handleMouseEnter(menuIndex)}
@@ -131,22 +140,21 @@ const BottomHeader = () => {
                        ${menuIndex === 0 && `  grid grid-cols-4 -translate-x-[31.8%] `}
                      ${menuIndex === 2 && "-translate-x-[44.3%]  flex gap-x-5"}
                      ${menuIndex === 3 && " -translate-x-[52.75%] flex flex-col bg-gray-800 "}
-                    ${[1, 4, 5].includes(menuIndex) && "w-60 px-8"}
+                    ${[1, 4, 5].includes(menuIndex) && "w-56 px-8"}
 
-                     ${[0]} text-sm 
+                   text-sm 
                        py-5 px-20`}
                   >
                     {menu?.submenus?.map((submenu, subIndex) => (
                       <li
-                      onMouseEnter={()=>handleMouseEnterTwo(subIndex)}
-                      onMouseLeave={()=>handleMouseLeaveTwo()}
+
                         key={subIndex}
                         className="text-gray-400 hover:text-white duration-200 ease-in-out transition-colors pb-3.5"
                       >
                         <div>{submenu?.title}</div>
 
                         {hoverIndexTwo === subIndex && submenu.submenusTwo && (
-                          <ul className="absolute top-0 left-[100%] w-60 bg-red-600 p-5 ">
+                          <ul className="absolute top-0 left-[100%] w-60 bg-red-600 py-5 ">
                             {submenu?.submenusTwo?.map((subMenuTwo, subIndexTwo) => (
                               <li key={subIndexTwo} className="pb-3.5 ">
                                 <div>

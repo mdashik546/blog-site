@@ -13,7 +13,7 @@ const Slider = () => {
       name: " Adventure Lover",
       comments: "0",
       month: "01 JAN 2020",
-      link: "Science"
+      link: "Science",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const Slider = () => {
       name: " Mystery Buff",
       comments: "1",
       month: "01 JAN 2020",
-      link: "Science"
+      link: "Science",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Slider = () => {
       name: " Sci-Fi Fan",
       comments: "2",
       month: "01 JAN 2020",
-      link: "Science"
+      link: "Science",
     },
   ];
 
@@ -58,8 +58,9 @@ const Slider = () => {
       {sliderData.map((slide, idx) => (
         <div
           key={slide.id}
-          className={`absolute transition-opacity duration-700 overflow-hidden  cursor-pointer   ${idx === currentIndex ? "opacity-100" : "opacity-0 "
-            }`}
+          className={`absolute transition-opacity duration-700 overflow-hidden  cursor-pointer   ${
+            idx === currentIndex ? "opacity-100" : "opacity-0 "
+          }`}
         >
           <Image
             src={slide.image}
@@ -70,7 +71,8 @@ const Slider = () => {
           />
 
           <div className="  w-full   z-10 absolute inset-0 bg-black/50   ">
-            <div className="text-white flex flex-col justify-center items-center text-center  mx-auto max-w-[650px] h-[700px]  ">
+            <div className="text-white flex flex-col justify-center items-center text-center  mx-auto max-w-[650px] 2xl:h-[700px] 
+            xl:h-[446px] lg:h-[357px] md:h-[268px] sm:h-[223px] h-auto ">
               <AnimateButton animateButton={slide?.link} />
 
               <div className="mt-5 ">
@@ -83,25 +85,25 @@ const Slider = () => {
                   alignment="justify-center"
                   textSize={"text-4xl"}
                   space={`space-y-6 leading-loose`}
-
                 ></BlogAnimation>
               </div>
             </div>
           </div>
+          <div className="absolute lg:top-1/2 top-1/3 lg:right-20 right-5 flex flex-col gap-3 ">
+            {sliderData.map((_, index) => (
+              <div
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={` z-10 size-3 mx-2 rounded-full cursor-pointer  duration-300   transition-all ${
+                  currentIndex === index
+                    ? "bg-[#E93314] "
+                    : "border hover:bg-[#E93314] hover:border-none  duration-500 delay-100 ease-in-out transition-all "
+                }`}
+              />
+            ))}
+          </div>
         </div>
       ))}
-      <div className="absolute top-96 right-20 flex flex-col gap-3 ">
-        {sliderData.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={` z-10 size-3 mx-2 rounded-full cursor-pointer  duration-300   transition-all ${currentIndex === index
-              ? "bg-[#E93314] "
-              : "border hover:bg-[#E93314] hover:border-none  duration-500 delay-100 ease-in-out transition-all "
-              }`}
-          />
-        ))}
-      </div>
     </div>
   );
 };
