@@ -6,7 +6,7 @@ import { BsTriangleFill } from "react-icons/bs";
 import BlogAnimation from "../blogAnimation/BlogAnimation";
 import AnimateButton from "../animateButton/AnimateButton";
 
-const RecentVideo = () => {
+  const RecentVideo = () => {
   const [currentVideo, setCurrentVideo] = useState({
     title: "Robots in Everyday Life: Exploring the Impact of AI",
     id: 1,

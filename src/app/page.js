@@ -18,15 +18,15 @@ export default function Home() {
       <Demo />
       <BottomHeader />
       <div className=" lg:w-[1200px] mx-auto">
-        {/* <BlogSection /> */}
-        {/* <Material /> */}
+        <BlogSection />
+        <Material />
       </div>
-      {/* <Trending /> */}
+      <Trending />
       <div className="w-[1200px] mx-auto">
-        {/* <RecentPosts /> */}
+        <RecentPosts />
       </div>
-      {/* <RecentVideo /> */}
-      {/* <PlanFilter/> */}
+      <RecentVideo />
+      <PlanFilter/>
 
     </>
 
