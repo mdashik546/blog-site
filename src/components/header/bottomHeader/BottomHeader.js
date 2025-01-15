@@ -124,7 +124,9 @@ const BottomHeader = () => {
             : <IoMenu />}
 
         </div>
-          <ul className={`md:static flex md:flex-row flex-col z-20 gap-x-5 absolute  duration-500 transition-transform   w-full left-0  ${menuOpen ? "top-0 md:bg-transparent bg-[#121418]   translate-y-0 p-10" : "bg-[#121418] md:-top-0 -top-36  md:-translate-y-0 -translate-y-36"}  `}>
+          <ul className={`md:static flex md:flex-row flex-col z-20 gap-x-5 absolute  duration-500 transition-transform  
+             w-full left-0  ${menuOpen ? "top-0 md:bg-transparent bg-[#121418]   translate-y-0 p-10"
+              : " md:-top-0 -top-36  md:-translate-y-0 -translate-y-36"}  `}>
             {navberData?.map((menu, menuIndex) => (
               <li
                 onMouseEnter={() => handleMouseEnter(menuIndex)}
@@ -136,10 +138,10 @@ const BottomHeader = () => {
                 <div>{menu?.title}</div>
                 {hoverIndex === menuIndex && menu?.submenus && (
                   <ul
-                    className={`absolute top-[52px] left-0   w-[1200px]  bg-[#121418]   
-                       ${menuIndex === 0 && `  grid grid-cols-4 -translate-x-[31.8%] `}
-                     ${menuIndex === 2 && "-translate-x-[44.3%]  flex gap-x-5"}
-                     ${menuIndex === 3 && " -translate-x-[52.75%] flex flex-col bg-gray-800 "}
+                    className={`absolute top-[52px] left-1/2 -translate-x-1/2   w-[1200px]  bg-[#121418]   
+                       ${menuIndex === 0 && `  grid grid-cols-4  `}
+                     ${menuIndex === 2 && " flex gap-x-5"}
+                     ${menuIndex === 3 && "flex flex-col bg-gray-800 "}
                     ${[1, 4, 5].includes(menuIndex) && "w-56 px-8"}
 
                    text-sm 
@@ -154,7 +156,7 @@ const BottomHeader = () => {
                         <div>{submenu?.title}</div>
 
                         {hoverIndexTwo === subIndex && submenu.submenusTwo && (
-                          <ul className="absolute top-0 left-[100%] w-60 bg-red-600 py-5 ">
+                          <ul className="absolute left-1/2 -translate-x-1/2 top-0  w-60 bg-red-600 py-5 ">
                             {submenu?.submenusTwo?.map((subMenuTwo, subIndexTwo) => (
                               <li key={subIndexTwo} className="pb-3.5 ">
                                 <div>
