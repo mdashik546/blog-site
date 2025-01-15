@@ -1,0 +1,65 @@
+{
+  "workbench.colorTheme": "Karma Legacy",
+  "window.menuBarVisibility": "visible",
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontWeight": "250",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "expand",
+  "terminal.integrated.fontSize": 15,
+  "workbench.iconTheme": "vscode-icons",
+  "window.titleBarStyle": "custom",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  // other settings
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "html": "HTML"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "explorer.confirmDelete": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "terminal.integrated.env.linux": {},
+  "json.schemas": [
+    
+  ],
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "editor.fontSize": 15
+}
