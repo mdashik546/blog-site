@@ -255,4 +255,8 @@ const CategoryModal = ({ setIsModalOpen }) => {
 };
 
 export default CategoryModal;
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+    setModalContent(React.cloneElement(<CategoryModal setIsModalOpen={setIsModalOpen} router={router}/>,{key:new Date().getTime()}))
 
+  };
